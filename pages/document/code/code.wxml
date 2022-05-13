@@ -1,0 +1,23 @@
+<ui-sys doc title="代码">
+    <view class="ui-container">
+        <!-- 简介 -->
+        <ui-title title="简介" depth="2" isIcon/>
+        <view class="paragraph">代码组件是用来展示计算机代码文本的一个组件。</view>
+
+        <!-- 行内用法 -->
+        <ui-title title="行内用法" depth="2" isIcon/>
+        <ui-code tag="pre" lang="html" content="{{code}}"/>
+
+        <!-- 代码块用法 -->
+        <ui-title title="代码块用法" depth="2" isIcon/>
+        <view class="blockquote">
+            <text>代码高亮是使用了</text>
+            <ui-code>PrismJS</ui-code>
+            <view>暗色主题的高亮颜色是亮色主题的反转。</view>
+        </view>
+
+        <ui-code tag="pre" lang="html" content="{{html}}"/>
+        <ui-code tag="pre" lang="css" content="{{css}}"/>
+
+    </view>
+</ui-sys>

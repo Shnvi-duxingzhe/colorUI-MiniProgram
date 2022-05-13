@@ -1,0 +1,105 @@
+<ui-sys>
+    <ui-navbar backtext="{{text}}" ui="{{ui}}" back="{{back}}" bg="{{bg}}" status="{{status}}" opacity="{{opacity}}" scrollTop="{{scrollTop}}"
+               opacityChange="{{opacityChange}}" opacityBg="{{opacityBg}}" noFixed="{{noFixed}}" capsule="{{capsule}}" stopBack="{{stopBack}}"
+               isSlot="{{isSlot}}" isCenter="{{isCenter}}" isRight="{{isRight}}" bind:navBack="navBack">
+
+        <block wx:if="{{isSlot}}">
+            <view class="flex-bar p-3" wx:if="{{scrollTop > sys_navBar}}">
+                <image src="/static/img/hapm8.png" mode="aspectFill" style="width: 200rpx;height: 56rpx;"/>
+            </view>
+            <view class="p-3 flex-bar flex-sub" wx:if="{{scrollTop > sys_navBar}}">
+                <view url="/pages/search/search" class="flex-sub flex-bar">
+                    <view class="p-2 bg-blur-1 w-100 round border flex-center" style="height: 35px;">
+                        <text class="cicon-search-line mx-2"/>
+                        <view class="text-c text-sm">键入类名搜索释义</view>
+                    </view>
+                </view>
+            </view>
+            <view class="flex-bar">
+                <view style="{{'width:'+ (sys_capsule.width + 10)+'px; height:'+sys_capsule.height+'px'}}"/>
+            </view>
+        </block>
+        <text slot="left" wx:if="{{isLeft}}">isLeft</text>
+        <text slot="center" wx:if="{{isCenter}}">isCenter</text>
+        <text slot="right" wx:if="{{isRight}}">isRight</text>
+    </ui-navbar>
+
+    <view class="ui-container">
+
+        <ui-title title="简介" depth="2" isIcon/>
+        <view class="paragraph">自定义顶部导航栏,适用于所有页面,小程序有返回胶囊样式可以使用。</view>
+
+        <ui-title title="操作" depth="2" isIcon/>
+        <ui-menu ui="border radius">
+            <ui-menu-item title="返回" isAction>
+                <ui-switch slot="action" checked="{{back}}" bind:change="isBackChange"/>
+            </ui-menu-item>
+            <ui-menu-item title="仅图标" isAction>
+                <ui-switch slot="action" checked="{{isText}}" bind:change="isTextChange"/>
+            </ui-menu-item>
+            <ui-menu-item title="标题栏背景" isAction>
+                <ui-switch slot="action" checked="{{isNavBg}}" bind:change="isNavBgChange"/>
+            </ui-menu-item>
+            <ui-menu-item title="状态栏颜色" isAction>
+                <ui-radio-group slot="action" clearable value="{{status}}" bind:change="isStatusChange">
+                    <ui-radio label="light">白色</ui-radio>
+                    <ui-radio label="dark">黑色</ui-radio>
+                </ui-radio-group>
+            </ui-menu-item>
+            <ui-menu-item title="文本" isAction>
+                <ui-input-box slot="action" class="text-right">
+                    <input class="ui-input-wrapper" model:value="{{text}}" placeholder="请输入文本"/>
+                </ui-input-box>
+            </ui-menu-item>
+            <ui-menu-item title="阴影" isAction>
+                <ui-radio-group slot="action" clearable value="{{ui}}" bind:change="isShadowChange">
+                    <ui-radio label="shadow-sm">小阴影</ui-radio>
+                    <ui-radio label="shadow">默认</ui-radio>
+                    <ui-radio label="shadow-lg">长阴影</ui-radio>
+                </ui-radio-group>
+            </ui-menu-item>
+            <ui-menu-item title="重定向为首页" isAction>
+                <button class="ui-btn border sm" slot="action" bindtap="tapSetNavbar">加载</button>
+            </ui-menu-item>
+            <ui-menu-item title="开启胶囊返回" isAction>
+                <ui-switch slot="action" checked="{{capsule}}" bind:change="isCapsuleChange"/>
+            </ui-menu-item>
+            <ui-menu-item title="返回事件" isAction>
+                <ui-switch slot="action" checked="{{stopBack}}" bind:change="isStopBackChange"/>
+            </ui-menu-item>
+        </ui-menu>
+
+        <ui-title title="滑动渐变" depth="2" isIcon/>
+        <ui-menu ui="border radius">
+            <ui-menu-item title="开启滑动渐变" isAction>
+                <ui-switch slot="action" checked="{{opacity}}" bind:change="isOpacityChange"/>
+            </ui-menu-item>
+            <ui-menu-item title="文本样式翻转" isAction>
+                <ui-switch slot="action" checked="{{opacityChange}}" bind:change="isOpacityChangeChange"/>
+            </ui-menu-item>
+            <ui-menu-item title="返回按钮背景" isAction>
+                <ui-switch slot="action" checked="{{opacityBg}}" bind:change="isOpacityBgChange"/>
+            </ui-menu-item>
+            <ui-menu-item title="是否浮动" isAction>
+                <ui-switch slot="action" checked="{{noFixed}}" bind:change="isNoFixedChange"/>
+            </ui-menu-item>
+        </ui-menu>
+
+        <ui-title title="插槽" depth="2" isIcon/>
+        <ui-menu ui="border radius">
+            <ui-menu-item title="isSlot" isAction>
+                <ui-switch slot="action" checked="{{isSlot}}" bind:change="isSlotChange"/>
+            </ui-menu-item>
+            <ui-menu-item title="isLeft" isAction>
+                <ui-switch slot="action" checked="{{isLeft}}" bind:change="isLeftChange"/>
+            </ui-menu-item>
+            <ui-menu-item title="isCenter" isAction>
+                <ui-switch slot="action" checked="{{isCenter}}" bind:change="isCenterChange"/>
+            </ui-menu-item>
+            <ui-menu-item title="isRight" isAction>
+                <ui-switch slot="action" checked="{{isRight}}" bind:change="isRightChange"/>
+            </ui-menu-item>
+        </ui-menu>
+
+    </view>
+</ui-sys>

@@ -1,0 +1,17 @@
+<ui-sys doc title="扩展图标库">
+    <view class="ui-container">
+
+        <ui-title title="扩展图标库" depth="2" isIcon/>
+        <view class="ui-icon-list ui-grid ui-cols-4 mt-3">
+            <view class="ui-item" wx:for="{{list}}" wx:key="index">
+                <view class="py-4 border radius ui-BG" style="height: 100%;" data-value="{{'cicon-' + item}}" bindtap="bgCopy">
+                    <view class="text-cut mt-2 icon-xxl p-4 ui-TC">
+                        <text class="{{'cicon-' + item}}"/>
+                    </view>
+                    <view class="text-cut mt-2 text-xs text-grey">{{ item }}</view>
+                </view>
+            </view>
+        </view>
+
+    </view>
+</ui-sys>

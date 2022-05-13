@@ -1,0 +1,7 @@
+<ui-sys doc title="折叠面板">
+    <view class="ui-container">
+        <!-- 简介 -->
+        <ui-title title="简介" depth="2" isIcon/>
+        <view class="paragraph">折叠面板，等待 ColorUI3.x 原版的开发。</view>
+    </view>
+</ui-sys>

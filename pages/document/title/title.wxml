@@ -1,0 +1,80 @@
+<ui-sys doc title="标题">
+    <view class="ui-container">
+        <ui-title title="简介" depth="2" isIcon/>
+        <view class="paragraph">标题组件可以快速构建一个等级标题。包含多种样式。</view>
+
+        <ui-title title="默认" depth="2" isIcon/>
+        <view class="ui-BG radius px-3 border">
+            <ui-title title="标题"/>
+        </view>
+
+        <ui-title title="副标题" depth="2" isIcon/>
+        <view class="ui-BG radius px-3 border">
+            <ui-title title="标题" desc="副标题"/>
+        </view>
+
+        <ui-title title="显示图标" depth="2" isIcon/>
+        <view class="ui-BG radius px-3 border">
+            <ui-title title="基础" desc="basic" isIcon/>
+        </view>
+        <view class="ui-BG radius px-3 border mt-3">
+            <ui-title title="自定义图标" desc="icon">
+                <text slot="icon" class="text-red cicon-whatshot"/>
+            </ui-title>
+        </view>
+
+        <ui-title title="等级" depth="2" isIcon/>
+        <view class="ui-BG radius px-3 border">
+            <ui-title title="等级一" desc="等级一" isIcon depth="1"/>
+        </view>
+        <view class="ui-BG radius px-3 border mt-3">
+            <ui-title title="等级二" desc="等级二" isIcon depth="2"/>
+        </view>
+        <view class="ui-BG radius px-3 border mt-3">
+            <ui-title title="等级三" desc="等级三" isIcon depth="3"/>
+        </view>
+        <view class="ui-BG radius px-3 border mt-3">
+            <ui-title title="等级四" desc="等级四" isIcon depth="4"/>
+        </view>
+
+        <ui-title title="特殊标记" depth="2" isIcon/>
+        <view class="ui-BG radius px-3 border">
+            <ui-title title="圆点" desc="dot" hasDot/>
+        </view>
+        <view class="ui-BG radius mt-3 px-3 border">
+            <ui-title title="短线" desc="line" hasLine/>
+        </view>
+
+        <ui-title title="内容对齐" depth="2" isIcon/>
+        <view class="ui-BG radius px-3 border">
+            <ui-title title="基础" desc="basic" align="left"/>
+        </view>
+        <view class="ui-BG radius mt-3 px-3 border">
+            <ui-title title="圆点" desc="dot" align="center" hasDot/>
+        </view>
+        <view class="ui-BG radius mt-3 px-3 border">
+            <ui-title title="短线" desc="line" align="right" hasLine/>
+        </view>
+
+        <ui-title title="特殊模板" depth="2" isIcon/>
+        <view class="ui-BG radius mt-3 px-3 border">
+            <ui-title title="精选推荐" titleColor="text-blue" descUi="text-cyan" desc="Carefully chosen" tpl="stack" hasDot/>
+        </view>
+        <view class="ui-BG radius mt-3 px-3 border">
+            <ui-title title="精选推荐" titleColor="text-blue" descUi="text-cyan" desc="Carefully chosen" tpl="stack" hasLine/>
+        </view>
+        <view class="ui-BG radius mt-3 px-3 border">
+            <ui-title title="精选推荐" titleColor="text-blue" descUi="text-cyan" desc="Carefully chosen" tpl="center-column" hasDot/>
+        </view>
+        <view class="ui-BG radius mt-3 px-3 border">
+            <ui-title title="精选推荐" titleColor="text-blue" tpl="center-column" hasDot/>
+        </view>
+        <view class="ui-BG radius mt-3 px-3 border">
+            <ui-title title="猜你喜欢" titleColor="text-red" descUi="text-orange" desc="Guess you like" tpl="center-column" hasLine/>
+        </view>
+        <view class="ui-BG radius mt-3 px-3 border">
+            <ui-title title="猜你喜欢" titleColor="text-red" tpl="center-column" hasLine/>
+        </view>
+
+    </view>
+</ui-sys>

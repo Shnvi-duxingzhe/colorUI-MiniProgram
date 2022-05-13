@@ -1,0 +1,77 @@
+<ui-sys doc title="标签">
+    <view class="ui-container">
+
+        <ui-title title="默认标签" depth="2" isIcon/>
+        <view class="p-3 ui-BG radius border">
+            <ui-tag info="30"/>
+        </view>
+
+        <ui-title title="标签形状" depth="2" isIcon/>
+        <view class="p-3 ui-BG border">
+            <ui-tag ui="" info="春风"/>
+            <ui-tag ui="round" info="秋日"/>
+        </view>
+
+        <ui-title title="标签大小" depth="2" isIcon/>
+        <view class="p-3 ui-BG radius border">
+			<ui-tag ui="xs" info="xs"/>
+            <ui-tag ui="sm" info="sm"/>
+            <ui-tag ui="" info="df"/>
+            <ui-tag ui="lg" info="lg"/>
+            <ui-tag ui="xl" info="xl"/>
+            <ui-tag ui="xxl" info="xxl"/>
+        </view>
+
+        <ui-title title="标签带图片" depth="2" isIcon/>
+        <view class="p-3 ui-BG radius border">
+            <ui-tag info="糖果炸弹" src="/static/avatar/1004.jpg"/>
+        </view>
+
+        <ui-title title="标签背景" depth="2" isIcon/>
+        <view class="p-3 ui-BG radius border">
+            <ui-tag info="bg-red" bg="bg-red" src="/static/avatar/1001.jpg"/>
+            <ui-tag bg="ui-BG-Main" info="ui-BG-Main"/>
+            <ui-tag bg="bg-mask-50" info="bg-mask-50"/>
+            <ui-tag bg="bg-red-gradient" info="bg-red-gradient"/>
+            <ui-tag bg="bg-red-thin" info="bg-red-thin"/>
+            <ui-tag bg="bg-red-light" info="bg-red-light"/>
+        </view>
+
+        <ui-title title="浮动标签" depth="2" isIcon/>
+        <view class="p-3 ui-grid ui-cols-5">
+            <view class="ui-item">
+                <ui-avatar ui="radius xl" src="/static/avatar/1002.jpg">
+                    <ui-tag badge/>
+                </ui-avatar>
+            </view>
+            <view class="ui-item">
+                <ui-avatar ui="round xl">
+                    <text>As</text>
+                    <ui-tag badge bg="bg-blue" isSlot>vip</ui-tag>
+                </ui-avatar>
+            </view>
+            <view class="ui-item">
+                <ui-avatar ui="round xl bg-blue">
+                    <text>Bf</text>
+                    <ui-tag badge="br" icon bg="shadow bg-white" isSlot>
+                        <text class="cicon-male text-blue"/>
+                    </ui-tag>
+                </ui-avatar>
+            </view>
+            <view class="ui-item">
+                <ui-avatar ui="round xl bg-pink">
+                    <text>Cv</text>
+                    <ui-tag badge="bl" bg="shadow bg-white" isSlot>
+                        <text class="cicon-female text-pink"/>
+                    </ui-tag>
+                </ui-avatar>
+            </view>
+            <view class="ui-item">
+                <ui-avatar ui="round xl bg-blue-thin borders border-blue">
+                    <text>Jx</text>
+                    <ui-tag badge="tl" ui="borders border-blue shadow-blue" bg="bg-blue-light" isSlot>user</ui-tag>
+                </ui-avatar>
+            </view>
+        </view>
+    </view>
+</ui-sys>

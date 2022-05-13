@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "app-nav-li": "/mp-sdk/components/app-nav-li/app-nav-li"
+    }
+}
